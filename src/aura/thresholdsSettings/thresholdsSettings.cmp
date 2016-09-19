@@ -1,0 +1,22 @@
+<aura:component controller="thresholdsService">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+    <aura:attribute name="setting" type="thresholds__c" />
+
+    <div class="slds-card slds-p-top--medium">
+        <header class="slds-card__header">
+            <h3 class="slds-text-heading--small">Thresholds Custom Setting Values</h3>
+        </header>
+        <section class="slds-card__body">
+            <p>High Limit : <ui:outputNumber value="{!v.setting.High_Limit__c}" /> </p>
+            <p>Low Limit : <ui:outputNumber value="{!v.setting.Low_Limit__c}" /> </p>
+            <p>Adjustment Factor : <ui:outputNumber value="{!v.setting.Adjustment_Factor__c}" /></p>
+            <p>Default Low Limit : <ui:outputNumber value="{!v.setting.Low_Limit_Default_Value__c}" /></p>
+        </section>
+        <section class="slds-card__body">
+            <ui:button label="Manually Invoke License Check"
+              class="slds-button slds-button--brand"
+              press="{!c.handleLicenseCheckPress}"/>
+        </section>
+    </div>
+</aura:component>

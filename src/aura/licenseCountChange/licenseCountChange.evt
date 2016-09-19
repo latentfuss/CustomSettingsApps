@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT" 
+            description="Fire this event when the License Count is known to have changed" >
+    <!-- add aura:attribute tags to define event shape.
+      One sample attribute here -->
+    <aura:attribute name="newCount" type="integer"/>
+</aura:event>

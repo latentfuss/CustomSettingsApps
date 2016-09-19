@@ -1,0 +1,18 @@
+<aura:component controller="thresholdsService">
+    <aura:attribute name="count" type="Integer" description="The count of available Licenses" />
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:handler name="newLicenseCount" event="c:licenseCountChange" action="{!c.handleLicenseCountChangeEvent}"/>
+    <div class="slds-card slds-p-top--medium">
+        <header class="slds-card__header">
+            <h3 class="slds-text-heading--small">Number of Available Licenses</h3>
+        </header>
+        <section class="slds-card__body">
+            <p>
+                Available Licenses : <ui:outputNumber value="{!v.count}" /> 
+            </p>
+            <c:issueOneLicense />
+            <c:addTenLicenses />
+            <c:addOneLicense />
+        </section>
+    </div>
+</aura:component>

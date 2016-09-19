@@ -1,0 +1,12 @@
+<aura:component >
+    <!-- PAGE HEADER -->
+    <div class="slds-page-header" role="banner">
+      <div class="slds-grid">
+        <div class="slds-col">
+          <p class="slds-text-heading--label">Instance Check</p>
+          <h1 class="slds-text-heading--medium">Instance Check Header</h1>
+        </div>
+      </div>
+    </div>
+    <!-- / PAGE HEADER -->
+</aura:component>

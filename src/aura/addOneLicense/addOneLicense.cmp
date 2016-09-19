@@ -1,0 +1,7 @@
+<aura:component controller="thresholdsService">
+            <ui:button label="Add One License"
+              class="slds-button slds-button--brand"
+              press="{!c.clickAddOneLicense}"/>
+    <aura:registerEvent name="newLicenseCount" type="c:licenseCountChange"/>
+    
+</aura:component>

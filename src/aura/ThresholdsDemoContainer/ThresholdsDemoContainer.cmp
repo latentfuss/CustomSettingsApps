@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable" >
+    <!-- Include the SLDS static resource (adjust to match package version) -->
+    <ltng:require styles="{!$Resource.SLDS201 + '/assets/styles/salesforce-lightning-design-system.css'}" />
+
+    <!-- Add the "scoping" element to activate SLDS on components
+         that we add inside it. -->
+    <div class="slds">
+      <br/>
+      <p><c:thresholdsSettings /></p>
+      <br/>
+      <p><c:availableLicenseCount /></p>
+    </div>
+    <!-- / SLDS SCOPING DIV -->
+</aura:component>
