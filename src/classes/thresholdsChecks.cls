@@ -13,7 +13,7 @@ public class thresholdsChecks {
             thresholds.Low_Limit__c = thresholds.Low_Limit_Default_Value__c;
             update thresholds; //Adjust the limit UP
         }
-        return thresholds ;
+        return thresholds;
     }
     
     public Case createLowLimitCase(integer availableLicenses, thresholds__c newSettings){

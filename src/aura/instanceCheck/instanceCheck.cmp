@@ -1,10 +1,5 @@
 <aura:component controller="instanceCheck"  implements="force:appHostable" >
-    <!-- Include the SLDS static resource (adjust to match package version) -->
-    <ltng:require styles="{!$Resource.SLDS201 + '/assets/styles/salesforce-lightning-design-system.css'}"/>
     <aura:attribute name="myText" type="String" default="Click 'Check' to identify Instance" />
-    <!-- Add the "scoping" element to activate SLDS on components
-         that we add inside it. -->
-    <div class="slds">
       <c:instanceCheckHeader /> 
       <div class="slds-p-around--medium">
         <p>{!v.myText}</p>
@@ -12,7 +7,4 @@
       <div class="slds-p-around--medium">
         <p><ui:button label="Check" press="{!c.check}" /></p>
       </div>
-    </div>
-    <!-- / SLDS SCOPING DIV -->
-
 </aura:component>
