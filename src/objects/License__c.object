@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This Custom sObject represents a License</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>isIssued__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that the License is Issued</description>
+        <externalId>false</externalId>
+        <label>Is Issued</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>License</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>isIssued__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Available_Licenses</fullName>
+        <columns>NAME</columns>
+        <columns>isIssued__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>isIssued__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Available Licenses</label>
+    </listViews>
+    <nameField>
+        <displayFormat>LIC{0000}</displayFormat>
+        <label>License Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Licenses</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>isIssued__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>isIssued__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>Check_Available_Licenses</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Check_Available_Licenses</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Check Available Licenses</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)}
+sforce.apex.execute(&quot;thresholdsChecks&quot;,&quot;licenseLowLevelCheck&quot;,{});
+window.location.reload();</url>
+    </webLinks>
+</CustomObject>

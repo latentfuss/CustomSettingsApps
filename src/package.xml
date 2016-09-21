@@ -5,11 +5,30 @@
         <members>thresholdsService</members>
         <members>thresholdsChecks</members>
         <members>thresholdsCheck_test</members>
+        <members>instanceCheck_test</members>
+        <members>thresholdsService_test</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>*</members>
         <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>License__c</members>
+        <members>h_Production_Org_Ids__c</members>
+        <members>thresholds__c</members>
+        <members>Case</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Lightning_Org_Id_Demo</members>
+        <members>Lightning_Thresholds_Demo</members>
+        <members>License__c</members>
+        <name>CustomTab</name>
     </types>
     <version>37.0</version>
 </Package>

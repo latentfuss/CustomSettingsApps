@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Used to set numerical limits</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Adjustment_Factor__c</fullName>
+        <description>Use to set the amount the limit is to be adjusted</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set the Adjustment Factor</inlineHelpText>
+        <label>Adjustment Factor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>High_Limit__c</fullName>
+        <description>Used to set a max limit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set the maximum limit threshold</inlineHelpText>
+        <label>High Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Low_Limit_Default_Value__c</fullName>
+        <description>This is the default value used when resetting the Low_Limit__c</description>
+        <externalId>false</externalId>
+        <label>Low Limit Default Value</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Low_Limit__c</fullName>
+        <description>Used to store the lower limit threshold</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set the lower limit for action</inlineHelpText>
+        <label>Low Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Thresholds</label>
+    <visibility>Public</visibility>
+</CustomObject>
